@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.etechoracio.boaviagem.GastoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azul"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/novoGasto"/>
+
+        </LinearLayout>
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1">
+
+            <TextView android:text="@string/tipodeGasto"/>
+
+            <Spinner
+                android:id="@+id/spnTipoGasto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TableRow>
+
+                <TextView android:text="@string/valor"/>
+
+                <TextView android:text="@string/data"/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <EditText android:id="@+id/valor"/>
+
+                <Button
+                    android:id="@+id/data"
+                    android:text="@string/data"/>
+
+            </TableRow>
+
+            <TextView android:text="@string/descricao"/>
+
+            <EditText
+                android:id="@+id/descricao"/>
+
+            <TextView android:text="@string/local"/>
+
+            <EditText
+                android:id="@+id/local"/>
+
+            <Button android:text="@string/salvar"/>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</ScrollView>
