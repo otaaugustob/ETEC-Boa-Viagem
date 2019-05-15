@@ -40,7 +40,7 @@
             <TextView android:text="@string/tipoViagem"/>
 
             <RadioGroup
-                android:id="@+id/groupTipoViagem"
+                android:id="@+id/radioTipo"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -88,7 +88,7 @@
             <TextView android:text="@string/orcamento"/>
 
             <EditText
-                android:id="@+id/orcamento"
+                android:id="@+id/editOrcamento"
                 android:inputType="numberDecimal"/>
 
 
@@ -99,12 +99,14 @@
                     android:text="@string/quantidadedePessoas"/>
 
                 <EditText
-                    android:id="@+id/quantidadedePessoas"
+                    android:id="@+id/editQuantidadePessoas"
                     android:inputType="number"/>
 
             </TableRow>
 
-            <Button android:text="@string/salvar"/>
+            <Button
+                android:onClick="onSalvar"
+                android:text="@string/salvar" />
 
         </TableLayout>
 

@@ -1,9 +1,11 @@
 package br.com.etechoracio.boaviagem.utils;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
 
 public class DateTimeUtils {
     public static final DateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
@@ -18,11 +20,17 @@ public class DateTimeUtils {
             return null;
 
         }
-    }/*
+    }
     public static Date toDate(String date)
     {
-      //  return DATE_FORMAT.parse()
-    }*/
+        try{
+            return DATE_FORMAT.parse(date);
+        }
+        catch (ParseException e){
+            return null;
+        }
+    }
+
 }
 
 
