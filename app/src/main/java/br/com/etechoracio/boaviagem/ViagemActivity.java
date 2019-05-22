@@ -13,6 +13,9 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Calendar;
 
 import br.com.etechoracio.boaviagem.enums.TipoViagemEnum;
@@ -95,6 +98,11 @@ public class ViagemActivity extends AppCompatActivity {
         if (tipo == R.id.radioLazer) {
             viagem.setTipoViagem(TipoViagemEnum.LAZER);
         }
+        DatabaseReference myref = FirebaseDatabase.getInstance().getReference("viagens");
+        String id = myref.push().getKey();
+        viagem.setId(id);
+        myref.child(id).setValue(viagem);
+
         showInsertMessage();
     }
         private void showInsertMessage()
